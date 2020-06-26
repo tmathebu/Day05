@@ -1,45 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmathebu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/25 13:16:17 by tmathebu          #+#    #+#             */
-/*   Updated: 2020/06/26 13:25:58 by tmathebu         ###   ########.fr       */
+/*   Created: 2020/06/26 14:17:36 by tmathebu          #+#    #+#             */
+/*   Updated: 2020/06/26 14:31:24 by tmathebu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
-#include<stdlib.h>
 
-char *ft_strcpy(char *dest, char *src);
+int ft_strcmp(char *s1, char *s2);
 
-int main(){
-   char *t = "thabo mathebula";
-   char *s;
-   s = ft_strcpy(s, t);
-   printf("Final copied string : %s\n", s);
-   printf("%c",'\n');
-  
-   return 0;
+int main (){
+	
 }
 
-char *ft_strcpy(char *dest, char *src){
+int ft_strcmp(char *s1, char *s2){
 	int i;
 	int j;
 	i = 0;
 	j = 0;
-	while(src[i] != '\0'){
-		i++;
+	while(s1[i] != '\0'){
+		i++;:
 	}
-	dest = (char *) malloc(sizeof(char)*i);
-	while(src[j] != '\0'){
-	*(dest + j) = src[j];
+	while(s2[j] != '\0'){
 		j++;
 	}
-	*(dest + j) = '\0';
-
-	return dest;
+	if(i > j){
+		return 1;
+	}
+	else if(i < j){
+		return -1;
+	}
+	else{
+		return 0;
+	}
 }
 
